@@ -20,7 +20,8 @@ public class StopWatchAspect {
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
 
-        logger.info("Start: -> " + stopWatch.getTotalTimeSeconds() + " " +  joinPoint.getSignature().getName());
+        logger.info("========" + joinPoint.getSignature().getName() + "=========");
+        logger.info("Start: -> " + stopWatch.getTotalTimeSeconds() );
 
         Object proceed = joinPoint.proceed();
 
