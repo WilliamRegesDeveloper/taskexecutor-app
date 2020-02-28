@@ -68,8 +68,10 @@ por exemplo, implementando ThreadPoolTaskExecutor como pool de threads. Assim, a
 CompletableFuture garante que todos os resultados obtidos podem ser agrupados e retornados ao cliente de requisição.
  
 _**6. Teste do exemplo**_
- - User o arquivo cobrancaemlote.jmx nesse projeto para testar envio de lote
- - Teste integrado para testar envio em lote;
+ - Se for por JMeter pode utilizar o arquivo cobrancaemlote.jmx na pasta jmeter no projeto e ver os logs gerado no IDE
+   das threads sendo abertas;
+   
+ - Teste integrado para testar envio em lote e ver os logs gerado no IDE das threads sendo abertas;
  
 Material obtido em:
 
