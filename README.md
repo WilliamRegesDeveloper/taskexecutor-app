@@ -25,18 +25,18 @@ Existe várias implementações de TaskExecutor. Sendo assim existe uma grande p
 implementar um task próprio. 
 
 **Tipos de TaskExecutor**
- - `SyncTaskExecutor` Esta implementação não executa chamadas de forma assíncrona. Em vez disso, cada chamada ocorre no
+ - `SyncTaskExecutor` Esta implementação não executa threads de forma assíncrona. Em vez disso, cada thread ocorre no
    encadeamento de chamada. É usado principalmente em situações em que a multithread não é necessária, como em casos de 
    teste simples;
   
- - `SimpleAsyncTaskExecutor` Essa implementação não reutiliza nenhum encadeamento, mas inicia um novo encadeamento para 
-   cada chamada. No entanto, ele suporta um limite de simultaneidade que bloqueia qualquer chamada que esteja acima do 
-   limite até que um slot seja liberado. Se você está procurando um pool verdadeiro, veja ThreadPoolTaskExecutorabaixo;
+ - `SimpleAsyncTaskExecutor` Essa implementação não reutiliza nenhuma thread, mas inicia um novo thread para 
+   cada chamada. No entanto, ele suporta um limite de simultaneidade que bloqueia qualquer thread que esteja acima do 
+   limite até que um slot seja liberado. Se você está procurando um pool verdadeiro, veja ThreadPoolTaskExecutor abaixo;
  
- - `ConcurrentTaskExecutor` Esta implementação é um adaptador para uma java.util.concurrent.Executorinstância. Existe uma
-   alternativa, ThreadPoolTaskExecutorque expõe os Executor parâmetros de configuração como propriedades do bean.
-   Raramente é necessário usar ConcurrentTaskExecutordiretamente, mas se o ThreadPoolTaskExecutoritem não for flexível
-   o suficiente para suas necessidades, ConcurrentTaskExecutorserá uma alternativa;
+ - `ConcurrentTaskExecutor` Esta implementação é um adaptador para uma instânccia de java.util.concurrent.Executor. 
+   Existe uma alternativa, ThreadPoolTaskExecutor expõe os parâmetros de configuração do Executor como propriedades do bean.
+   Raramente é necessário usar ConcurrentTaskExecutor diretamente, mas se o item ThreadPoolTaskExecutor não for flexível
+   o suficiente para suas necessidades, ConcurrentTaskExecutor será uma alternativa;
    
  - `ThreadPoolTaskExecutor` Essa implementação é a mais usada. Ele expõe as propriedades do bean para configurar um 
    java.util.concurrent.ThreadPoolExecutore envolve-o em um TaskExecutor. Se você precisar se adaptar a um tipo
