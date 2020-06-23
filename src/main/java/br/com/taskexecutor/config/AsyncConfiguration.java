@@ -2,6 +2,7 @@ package br.com.taskexecutor.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.SyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
@@ -13,28 +14,30 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @EnableAsync
 public class AsyncConfiguration {
 
-    @Bean(name = "threadPoolTaskExecutor")
-    public TaskExecutor threadPoolTaskExecutor() {
+    @Bean(name = "threadPoolTaskExecutorCustom")
+    public ThreadPoolTaskExecutor getThreadPoolTaskExecutorCustom() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setThreadNamePrefix("custom-");
         executor.setCorePoolSize(10);
-        executor.setMaxPoolSize(20);
-        executor.setQueueCapacity(500);
+        executor.setMaxPoolSize(5000);
+        executor.setQueueCapacity(1000);
         executor.setWaitForTasksToCompleteOnShutdown(true);
+        executor.initialize();
         return executor;
     }
 
     @Bean(name = "syncTaskExecutor")
-    public TaskExecutor syncTaskExecutor() {
+    public TaskExecutor getSyncTaskExecutor() {
        return new SyncTaskExecutor();
     }
 
     @Bean(name = "simpleAsyncTaskExecutor")
-    public TaskExecutor simpleAsyncTaskExecutor() {
+    public TaskExecutor getSimpleAsyncTaskExecutor() {
         return new SimpleAsyncTaskExecutor();
     }
 
     @Bean(name = "concurrentTaskExecutor")
-    public TaskExecutor concurrentTaskExecutor() {
+    public TaskExecutor getConcurrentTaskExecutor() {
         return new ConcurrentTaskExecutor();
     }
 }

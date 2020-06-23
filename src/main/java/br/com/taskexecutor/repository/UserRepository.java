@@ -7,6 +7,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 
 @Service
@@ -14,19 +15,19 @@ public class UserRepository {
 
     private final static Logger logger = LoggerFactory.getLogger(UserRepository.class);
 
-    @Async("threadPoolTaskExecutor")
-    public CompletableFuture<User> threadPoolTaskExecutor(String user)  {
-        logger.info("Thread -> " + Thread.currentThread().getName());
-        User userResult = new User();
-        userResult.setLogin("123");
-        userResult.setId(user);
-        userResult.setData(LocalDateTime.now());
+    @Async("threadPoolTaskExecutorCustom")
+    public CompletableFuture<User> threadPoolTaskExecutor(String user) {
 
+        logger.info("Thread -> " + Thread.currentThread().getName());
+            User userResult = new User();
+            userResult.setLogin("123");
+            userResult.setId(user);
+            userResult.setData(LocalDateTime.now());
         return CompletableFuture.completedFuture(userResult);
     }
 
     @Async("syncTaskExecutor")
-    public CompletableFuture<User> syncTaskExecutor(String user)  {
+    public CompletableFuture<User> syncTaskExecutor(String user) {
         logger.info("Thread -> " + Thread.currentThread().getName());
         User userResult = new User();
         userResult.setLogin("123");
@@ -37,7 +38,7 @@ public class UserRepository {
     }
 
     @Async("simpleAsyncTaskExecutor")
-    public CompletableFuture<User> simpleAsyncTaskExecutor(String user)  {
+    public CompletableFuture<User> simpleAsyncTaskExecutor(String user) {
         logger.info("Thread -> " + Thread.currentThread().getName());
         User userResult = new User();
         userResult.setLogin("123");
@@ -48,7 +49,7 @@ public class UserRepository {
     }
 
     @Async("concurrentTaskExecutor")
-    public CompletableFuture<User> concurrentTaskExecutor(String user)  {
+    public CompletableFuture<User> concurrentTaskExecutor(String user) {
         logger.info("Thread -> " + Thread.currentThread().getName());
         User userResult = new User();
         userResult.setLogin("123");
@@ -58,7 +59,7 @@ public class UserRepository {
         return CompletableFuture.completedFuture(userResult);
     }
 
-    public CompletableFuture<User> paralellStream(String user)  {
+    public CompletableFuture<User> paralellStream(String user) {
         logger.info("Thread -> " + Thread.currentThread().getName());
         User userResult = new User();
         userResult.setLogin("123");
@@ -66,5 +67,17 @@ public class UserRepository {
         userResult.setData(LocalDateTime.now());
 
         return CompletableFuture.completedFuture(userResult);
+    }
+
+    public Callable<User> callable(String user) {
+
+        return () -> {
+            logger.info("Thread -> " + Thread.currentThread().getName());
+            User userResult = new User();
+            userResult.setLogin("123");
+            userResult.setId(user);
+            userResult.setData(LocalDateTime.now());
+            return userResult;
+        };
     }
 }

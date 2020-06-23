@@ -53,5 +53,11 @@ public class UserController {
         return userProcessService.parallelStream(nameUsers);
     }
 
+    @PostMapping(value = "/process/user/parallel/callable")
+    @ResponseBody
+    public List<User> parallelCallable(@RequestBody List<String> nameUsers ) {
+        return userProcessService.processCallable(nameUsers);
+    }
+
 
 }
