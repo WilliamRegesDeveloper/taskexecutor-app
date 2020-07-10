@@ -23,6 +23,12 @@ public class UserController {
     @Autowired
     private UserProcessService userProcessService;
 
+    @PostMapping(value = "/process/user/simple/async/task/executor")
+    @ResponseBody
+    public List<User> processSimpleAsyncTaskExecutor(@RequestBody List<String> nameUsers ) {
+        return userProcessService.processSimpleAsyncTaskExecutor(nameUsers);
+    }
+
     @PostMapping(value = "/process/user/thread/pool/task/executor")
     @ResponseBody
     public List<User> processUserWithThreadPoolTaskExecutor(@RequestBody List<String> nameUsers ) {
@@ -33,12 +39,6 @@ public class UserController {
     @ResponseBody
     public List<User> processSyncTaskExecutor(@RequestBody List<String> nameUsers ) {
         return userProcessService.processSyncTaskExecutor(nameUsers);
-    }
-
-    @PostMapping(value = "/process/user/simple/async/task/executor")
-    @ResponseBody
-    public List<User> processSimpleAsyncTaskExecutor(@RequestBody List<String> nameUsers ) {
-        return userProcessService.processSimpleAsyncTaskExecutor(nameUsers);
     }
 
     @PostMapping(value = "/process/user/concurrent/task/executor")

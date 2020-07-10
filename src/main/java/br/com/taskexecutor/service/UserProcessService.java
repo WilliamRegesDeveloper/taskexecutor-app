@@ -27,6 +27,15 @@ public class UserProcessService {
     private ThreadPoolTaskExecutor threadPoolTaskExecutorCustom;
 
     @ShowCronous
+    public List<User> processSimpleAsyncTaskExecutor(List<String> nameUsers) {
+        List<CompletableFuture<User>> futures = nameUsers
+                .stream()
+                .map(this.repository::simpleAsyncTaskExecutor)
+                .collect(Collectors.toList());
+        return extractValueOnCompletableFuture(futures);
+    }
+
+    @ShowCronous
     public List<User> processThreadPoolTaskExecutor(List<String> nameUsers) {
         List<CompletableFuture<User>> futures = nameUsers
                 .stream()
@@ -40,15 +49,6 @@ public class UserProcessService {
         List<CompletableFuture<User>> futures = nameUsers
                 .stream()
                 .map(this.repository::syncTaskExecutor)
-                .collect(Collectors.toList());
-        return extractValueOnCompletableFuture(futures);
-    }
-
-    @ShowCronous
-    public List<User> processSimpleAsyncTaskExecutor(List<String> nameUsers) {
-        List<CompletableFuture<User>> futures = nameUsers
-                .stream()
-                .map(this.repository::simpleAsyncTaskExecutor)
                 .collect(Collectors.toList());
         return extractValueOnCompletableFuture(futures);
     }

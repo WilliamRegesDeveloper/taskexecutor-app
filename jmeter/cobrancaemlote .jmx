@@ -18,14 +18,51 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ChargeInBatch" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árvore de Resultados" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread User" enabled="true">
         <stringProp name="TestPlan.comments">Enviar cobranças em lote</stringProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">5000</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -43,10 +80,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração ThreadPoolTaskExecutor" enabled="true">
-          <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">${repeticoes}</stringProp>
-        </LoopController>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test ThreadPoolTaskExecutor" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP " enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -54,65 +88,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">&#xd;
-	[&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;1william franklin&quot;&#xd;
-	]&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">[&quot;Abigail Peralta&quot;,&quot;Adelaide Muniz&quot;,&quot;Ad\u00e9lio Anlicoara&quot;,&quot;Ad\u00e9lio Asunci\u00f3n&quot;,&quot;Alarico Macena&quot;,&quot;Albino Belchiorinho&quot;,&quot;Albino Coimbra&quot;,&quot;Alceste Var\u00e3o&quot;,&quot;Aline Mainha&quot;,&quot;Alu\u00edsio Mayor&quot;,&quot;Alzira Bezerril&quot;,&quot;Ang\u00e9lico Viana&quot;,&quot;Arminda Penteado&quot;,&quot;Artur Estrela&quot;,&quot;Baltasar Fortunato&quot;,&quot;Branca Furquim&quot;,&quot;B\u00e1rbara Queir\u00f3s&quot;,&quot;Caetano Prado&quot;,&quot;Calisto Mansilha&quot;,&quot;Carminda Porci\u00fancula&quot;,&quot;Clotilde Meneses&quot;,&quot;Conrado Diniz&quot;,&quot;Cosperranho Villas Boas&quot;,&quot;C\u00e1ssio Canedo&quot;,&quot;C\u00e9sar Mangueira&quot;,&quot;David Mascarenhas&quot;,&quot;Dinis Caballero&quot;,&quot;Di\u00f3genes Bocai\u00fava&quot;,&quot;Elisabete Nunes&quot;,&quot;Eloi Castellano&quot;,&quot;Elvira Beltr\u00e3o&quot;,&quot;Elvira Morais&quot;,&quot;Emiliana Zarco&quot;,&quot;Em\u00eddio Barrios&quot;,&quot;Esmeralda P\u00eassego&quot;,&quot;Eudes Campos&quot;,&quot;Evandro Olivares&quot;,&quot;Fabiano Pirassununga&quot;,&quot;Felicidade Quiroga&quot;,&quot;Fernanda Marques&quot;,&quot;Florinda Reis&quot;,&quot;Fl\u00e1via Bernardes&quot;,&quot;Galindo Leal&quot;,&quot;Geraldo Gentil&quot;,&quot;Gil Ferreira&quot;,&quot;Gilberto Sacadura&quot;,&quot;Godofredo Vasques&quot;,&quot;Hugo Borja&quot;,&quot;Ibijara Gaspar&quot;,&quot;Ingrit Teves&quot;,&quot;Isilda Galindo&quot;,&quot;Jacinta Guaran\u00e1&quot;,&quot;Jaime Mora&quot;,&quot;Jana\u00edna Guterres&quot;,&quot;Jer\u00f3nimo, Jer\u00f4nimo Noite&quot;,&quot;J\u00f3natas Fagundes&quot;,&quot;Leandro Candal&quot;,&quot;Leonilde Outeiro&quot;,&quot;Levi Campello&quot;,&quot;Lineu Ornellas&quot;,&quot;Lino Coelho&quot;,&quot;Louren\u00e7o Marinho&quot;,&quot;Margarida Bezerra&quot;,&quot;Maria Silveira dos A\u00e7ores&quot;,&quot;Mariano Mour\u00e3o&quot;,&quot;Mateus Noguera&quot;,&quot;Maura Cerveira&quot;,&quot;Mbicy Freyre&quot;,&quot;M\u00e1ximo Porto&quot;,&quot;N\u00e1dia Caires&quot;,&quot;Of\u00e9lia Rem\u00edgio&quot;,&quot;Oscar   Leiria&quot;,&quot;Osvaldo Mour\u00e3o&quot;,&quot;Palmira Lima&quot;,&quot;Paula Quinta&quot;,&quot;Paulino Queiroga&quot;,&quot;Raimundo Espartero&quot;,&quot;Ram\u00e3o Ruas&quot;,&quot;Ram\u00e3o Varanda&quot;,&quot;Reinaldo Pessanha&quot;,&quot;Renato Velasques&quot;,&quot;Roque G\u00f3is&quot;,&quot;Rosa Varanda&quot;,&quot;Ros\u00e1lia Horta&quot;,&quot;Ruca Pacheco&quot;,&quot;Sabrina Correa&quot;,&quot;Salom\u00e3o Louzada&quot;,&quot;Sandro Beiriz&quot;,&quot;Solano Carvalhosa&quot;,&quot;Tom\u00e1sia Sequera&quot;,&quot;Trist\u00e3o Guimaraes&quot;,&quot;Ur\u00e2nia Goes&quot;,&quot;Vanderlei Amaral&quot;,&quot;Vicente Gentil&quot;,&quot;Ximeno Becerril&quot;,&quot;Xisto Nobre&quot;,&quot;Zilda Os\u00f3rio&quot;,&quot;\u00c2ngela Vianna&quot;,&quot;\u00c9rica Arantes&quot;,&quot;\u00c9rico Pardo&quot;]</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -142,39 +118,18 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Gerenciador de Cookie HTTP" enabled="true">
-              <collectionProp name="CookieManager.cookies">
-                <elementProp name="JSESSIONID" elementType="Cookie" testname="JSESSIONID">
-                  <stringProp name="Cookie.value">418AB76CD83EF94U85YD34W</stringProp>
-                  <stringProp name="Cookie.domain"></stringProp>
-                  <stringProp name="Cookie.path"></stringProp>
-                  <boolProp name="Cookie.secure">false</boolProp>
-                  <longProp name="Cookie.expires">0</longProp>
-                  <boolProp name="Cookie.path_specified">true</boolProp>
-                  <boolProp name="Cookie.domain_specified">true</boolProp>
-                </elementProp>
-              </collectionProp>
-              <boolProp name="CookieManager.clearEachIteration">false</boolProp>
-              <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
-            </CookieManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Asserções de Resposta" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1875008601">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-              <stringProp name="Assertion.scope">all</stringProp>
-            </ResponseAssertion>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH"></stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">true</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração SyncTaskExecutor" enabled="true">
-          <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">${repeticoes}</stringProp>
-        </LoopController>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test SyncTaskExecutor" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP " enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -182,65 +137,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">&#xd;
-	[&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;1william franklin&quot;&#xd;
-	]&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">[&quot;Abigail Peralta&quot;,&quot;Adelaide Muniz&quot;,&quot;Ad\u00e9lio Anlicoara&quot;,&quot;Ad\u00e9lio Asunci\u00f3n&quot;,&quot;Alarico Macena&quot;,&quot;Albino Belchiorinho&quot;,&quot;Albino Coimbra&quot;,&quot;Alceste Var\u00e3o&quot;,&quot;Aline Mainha&quot;,&quot;Alu\u00edsio Mayor&quot;,&quot;Alzira Bezerril&quot;,&quot;Ang\u00e9lico Viana&quot;,&quot;Arminda Penteado&quot;,&quot;Artur Estrela&quot;,&quot;Baltasar Fortunato&quot;,&quot;Branca Furquim&quot;,&quot;B\u00e1rbara Queir\u00f3s&quot;,&quot;Caetano Prado&quot;,&quot;Calisto Mansilha&quot;,&quot;Carminda Porci\u00fancula&quot;,&quot;Clotilde Meneses&quot;,&quot;Conrado Diniz&quot;,&quot;Cosperranho Villas Boas&quot;,&quot;C\u00e1ssio Canedo&quot;,&quot;C\u00e9sar Mangueira&quot;,&quot;David Mascarenhas&quot;,&quot;Dinis Caballero&quot;,&quot;Di\u00f3genes Bocai\u00fava&quot;,&quot;Elisabete Nunes&quot;,&quot;Eloi Castellano&quot;,&quot;Elvira Beltr\u00e3o&quot;,&quot;Elvira Morais&quot;,&quot;Emiliana Zarco&quot;,&quot;Em\u00eddio Barrios&quot;,&quot;Esmeralda P\u00eassego&quot;,&quot;Eudes Campos&quot;,&quot;Evandro Olivares&quot;,&quot;Fabiano Pirassununga&quot;,&quot;Felicidade Quiroga&quot;,&quot;Fernanda Marques&quot;,&quot;Florinda Reis&quot;,&quot;Fl\u00e1via Bernardes&quot;,&quot;Galindo Leal&quot;,&quot;Geraldo Gentil&quot;,&quot;Gil Ferreira&quot;,&quot;Gilberto Sacadura&quot;,&quot;Godofredo Vasques&quot;,&quot;Hugo Borja&quot;,&quot;Ibijara Gaspar&quot;,&quot;Ingrit Teves&quot;,&quot;Isilda Galindo&quot;,&quot;Jacinta Guaran\u00e1&quot;,&quot;Jaime Mora&quot;,&quot;Jana\u00edna Guterres&quot;,&quot;Jer\u00f3nimo, Jer\u00f4nimo Noite&quot;,&quot;J\u00f3natas Fagundes&quot;,&quot;Leandro Candal&quot;,&quot;Leonilde Outeiro&quot;,&quot;Levi Campello&quot;,&quot;Lineu Ornellas&quot;,&quot;Lino Coelho&quot;,&quot;Louren\u00e7o Marinho&quot;,&quot;Margarida Bezerra&quot;,&quot;Maria Silveira dos A\u00e7ores&quot;,&quot;Mariano Mour\u00e3o&quot;,&quot;Mateus Noguera&quot;,&quot;Maura Cerveira&quot;,&quot;Mbicy Freyre&quot;,&quot;M\u00e1ximo Porto&quot;,&quot;N\u00e1dia Caires&quot;,&quot;Of\u00e9lia Rem\u00edgio&quot;,&quot;Oscar   Leiria&quot;,&quot;Osvaldo Mour\u00e3o&quot;,&quot;Palmira Lima&quot;,&quot;Paula Quinta&quot;,&quot;Paulino Queiroga&quot;,&quot;Raimundo Espartero&quot;,&quot;Ram\u00e3o Ruas&quot;,&quot;Ram\u00e3o Varanda&quot;,&quot;Reinaldo Pessanha&quot;,&quot;Renato Velasques&quot;,&quot;Roque G\u00f3is&quot;,&quot;Rosa Varanda&quot;,&quot;Ros\u00e1lia Horta&quot;,&quot;Ruca Pacheco&quot;,&quot;Sabrina Correa&quot;,&quot;Salom\u00e3o Louzada&quot;,&quot;Sandro Beiriz&quot;,&quot;Solano Carvalhosa&quot;,&quot;Tom\u00e1sia Sequera&quot;,&quot;Trist\u00e3o Guimaraes&quot;,&quot;Ur\u00e2nia Goes&quot;,&quot;Vanderlei Amaral&quot;,&quot;Vicente Gentil&quot;,&quot;Ximeno Becerril&quot;,&quot;Xisto Nobre&quot;,&quot;Zilda Os\u00f3rio&quot;,&quot;\u00c2ngela Vianna&quot;,&quot;\u00c9rica Arantes&quot;,&quot;\u00c9rico Pardo&quot;]</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -270,39 +167,18 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Gerenciador de Cookie HTTP" enabled="true">
-              <collectionProp name="CookieManager.cookies">
-                <elementProp name="JSESSIONID" elementType="Cookie" testname="JSESSIONID">
-                  <stringProp name="Cookie.value">418AB76CD83EF94U85YD34W</stringProp>
-                  <stringProp name="Cookie.domain"></stringProp>
-                  <stringProp name="Cookie.path"></stringProp>
-                  <boolProp name="Cookie.secure">false</boolProp>
-                  <longProp name="Cookie.expires">0</longProp>
-                  <boolProp name="Cookie.path_specified">true</boolProp>
-                  <boolProp name="Cookie.domain_specified">true</boolProp>
-                </elementProp>
-              </collectionProp>
-              <boolProp name="CookieManager.clearEachIteration">false</boolProp>
-              <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
-            </CookieManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Asserções de Resposta" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1875008601">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-              <stringProp name="Assertion.scope">all</stringProp>
-            </ResponseAssertion>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH"></stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">true</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração SimpleAsyncTaskExecutor" enabled="true">
-          <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">${repeticoes}</stringProp>
-        </LoopController>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test SimpleAsyncTaskExecutor" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP " enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -310,65 +186,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">&#xd;
-	[&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;1william franklin&quot;&#xd;
-	]&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">[&quot;Abigail Peralta&quot;,&quot;Adelaide Muniz&quot;,&quot;Ad\u00e9lio Anlicoara&quot;,&quot;Ad\u00e9lio Asunci\u00f3n&quot;,&quot;Alarico Macena&quot;,&quot;Albino Belchiorinho&quot;,&quot;Albino Coimbra&quot;,&quot;Alceste Var\u00e3o&quot;,&quot;Aline Mainha&quot;,&quot;Alu\u00edsio Mayor&quot;,&quot;Alzira Bezerril&quot;,&quot;Ang\u00e9lico Viana&quot;,&quot;Arminda Penteado&quot;,&quot;Artur Estrela&quot;,&quot;Baltasar Fortunato&quot;,&quot;Branca Furquim&quot;,&quot;B\u00e1rbara Queir\u00f3s&quot;,&quot;Caetano Prado&quot;,&quot;Calisto Mansilha&quot;,&quot;Carminda Porci\u00fancula&quot;,&quot;Clotilde Meneses&quot;,&quot;Conrado Diniz&quot;,&quot;Cosperranho Villas Boas&quot;,&quot;C\u00e1ssio Canedo&quot;,&quot;C\u00e9sar Mangueira&quot;,&quot;David Mascarenhas&quot;,&quot;Dinis Caballero&quot;,&quot;Di\u00f3genes Bocai\u00fava&quot;,&quot;Elisabete Nunes&quot;,&quot;Eloi Castellano&quot;,&quot;Elvira Beltr\u00e3o&quot;,&quot;Elvira Morais&quot;,&quot;Emiliana Zarco&quot;,&quot;Em\u00eddio Barrios&quot;,&quot;Esmeralda P\u00eassego&quot;,&quot;Eudes Campos&quot;,&quot;Evandro Olivares&quot;,&quot;Fabiano Pirassununga&quot;,&quot;Felicidade Quiroga&quot;,&quot;Fernanda Marques&quot;,&quot;Florinda Reis&quot;,&quot;Fl\u00e1via Bernardes&quot;,&quot;Galindo Leal&quot;,&quot;Geraldo Gentil&quot;,&quot;Gil Ferreira&quot;,&quot;Gilberto Sacadura&quot;,&quot;Godofredo Vasques&quot;,&quot;Hugo Borja&quot;,&quot;Ibijara Gaspar&quot;,&quot;Ingrit Teves&quot;,&quot;Isilda Galindo&quot;,&quot;Jacinta Guaran\u00e1&quot;,&quot;Jaime Mora&quot;,&quot;Jana\u00edna Guterres&quot;,&quot;Jer\u00f3nimo, Jer\u00f4nimo Noite&quot;,&quot;J\u00f3natas Fagundes&quot;,&quot;Leandro Candal&quot;,&quot;Leonilde Outeiro&quot;,&quot;Levi Campello&quot;,&quot;Lineu Ornellas&quot;,&quot;Lino Coelho&quot;,&quot;Louren\u00e7o Marinho&quot;,&quot;Margarida Bezerra&quot;,&quot;Maria Silveira dos A\u00e7ores&quot;,&quot;Mariano Mour\u00e3o&quot;,&quot;Mateus Noguera&quot;,&quot;Maura Cerveira&quot;,&quot;Mbicy Freyre&quot;,&quot;M\u00e1ximo Porto&quot;,&quot;N\u00e1dia Caires&quot;,&quot;Of\u00e9lia Rem\u00edgio&quot;,&quot;Oscar   Leiria&quot;,&quot;Osvaldo Mour\u00e3o&quot;,&quot;Palmira Lima&quot;,&quot;Paula Quinta&quot;,&quot;Paulino Queiroga&quot;,&quot;Raimundo Espartero&quot;,&quot;Ram\u00e3o Ruas&quot;,&quot;Ram\u00e3o Varanda&quot;,&quot;Reinaldo Pessanha&quot;,&quot;Renato Velasques&quot;,&quot;Roque G\u00f3is&quot;,&quot;Rosa Varanda&quot;,&quot;Ros\u00e1lia Horta&quot;,&quot;Ruca Pacheco&quot;,&quot;Sabrina Correa&quot;,&quot;Salom\u00e3o Louzada&quot;,&quot;Sandro Beiriz&quot;,&quot;Solano Carvalhosa&quot;,&quot;Tom\u00e1sia Sequera&quot;,&quot;Trist\u00e3o Guimaraes&quot;,&quot;Ur\u00e2nia Goes&quot;,&quot;Vanderlei Amaral&quot;,&quot;Vicente Gentil&quot;,&quot;Ximeno Becerril&quot;,&quot;Xisto Nobre&quot;,&quot;Zilda Os\u00f3rio&quot;,&quot;\u00c2ngela Vianna&quot;,&quot;\u00c9rica Arantes&quot;,&quot;\u00c9rico Pardo&quot;]</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -398,39 +216,18 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Gerenciador de Cookie HTTP" enabled="true">
-              <collectionProp name="CookieManager.cookies">
-                <elementProp name="JSESSIONID" elementType="Cookie" testname="JSESSIONID">
-                  <stringProp name="Cookie.value">418AB76CD83EF94U85YD34W</stringProp>
-                  <stringProp name="Cookie.domain"></stringProp>
-                  <stringProp name="Cookie.path"></stringProp>
-                  <boolProp name="Cookie.secure">false</boolProp>
-                  <longProp name="Cookie.expires">0</longProp>
-                  <boolProp name="Cookie.path_specified">true</boolProp>
-                  <boolProp name="Cookie.domain_specified">true</boolProp>
-                </elementProp>
-              </collectionProp>
-              <boolProp name="CookieManager.clearEachIteration">false</boolProp>
-              <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
-            </CookieManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Asserções de Resposta" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1875008601">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-              <stringProp name="Assertion.scope">all</stringProp>
-            </ResponseAssertion>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH"></stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">true</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração ConcurrentTaskExecutor" enabled="true">
-          <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">${repeticoes}</stringProp>
-        </LoopController>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test ConcurrentTaskExecutor" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP " enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -438,65 +235,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">&#xd;
-	[&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;1william franklin&quot;&#xd;
-	]&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">[&quot;Abigail Peralta&quot;,&quot;Adelaide Muniz&quot;,&quot;Ad\u00e9lio Anlicoara&quot;,&quot;Ad\u00e9lio Asunci\u00f3n&quot;,&quot;Alarico Macena&quot;,&quot;Albino Belchiorinho&quot;,&quot;Albino Coimbra&quot;,&quot;Alceste Var\u00e3o&quot;,&quot;Aline Mainha&quot;,&quot;Alu\u00edsio Mayor&quot;,&quot;Alzira Bezerril&quot;,&quot;Ang\u00e9lico Viana&quot;,&quot;Arminda Penteado&quot;,&quot;Artur Estrela&quot;,&quot;Baltasar Fortunato&quot;,&quot;Branca Furquim&quot;,&quot;B\u00e1rbara Queir\u00f3s&quot;,&quot;Caetano Prado&quot;,&quot;Calisto Mansilha&quot;,&quot;Carminda Porci\u00fancula&quot;,&quot;Clotilde Meneses&quot;,&quot;Conrado Diniz&quot;,&quot;Cosperranho Villas Boas&quot;,&quot;C\u00e1ssio Canedo&quot;,&quot;C\u00e9sar Mangueira&quot;,&quot;David Mascarenhas&quot;,&quot;Dinis Caballero&quot;,&quot;Di\u00f3genes Bocai\u00fava&quot;,&quot;Elisabete Nunes&quot;,&quot;Eloi Castellano&quot;,&quot;Elvira Beltr\u00e3o&quot;,&quot;Elvira Morais&quot;,&quot;Emiliana Zarco&quot;,&quot;Em\u00eddio Barrios&quot;,&quot;Esmeralda P\u00eassego&quot;,&quot;Eudes Campos&quot;,&quot;Evandro Olivares&quot;,&quot;Fabiano Pirassununga&quot;,&quot;Felicidade Quiroga&quot;,&quot;Fernanda Marques&quot;,&quot;Florinda Reis&quot;,&quot;Fl\u00e1via Bernardes&quot;,&quot;Galindo Leal&quot;,&quot;Geraldo Gentil&quot;,&quot;Gil Ferreira&quot;,&quot;Gilberto Sacadura&quot;,&quot;Godofredo Vasques&quot;,&quot;Hugo Borja&quot;,&quot;Ibijara Gaspar&quot;,&quot;Ingrit Teves&quot;,&quot;Isilda Galindo&quot;,&quot;Jacinta Guaran\u00e1&quot;,&quot;Jaime Mora&quot;,&quot;Jana\u00edna Guterres&quot;,&quot;Jer\u00f3nimo, Jer\u00f4nimo Noite&quot;,&quot;J\u00f3natas Fagundes&quot;,&quot;Leandro Candal&quot;,&quot;Leonilde Outeiro&quot;,&quot;Levi Campello&quot;,&quot;Lineu Ornellas&quot;,&quot;Lino Coelho&quot;,&quot;Louren\u00e7o Marinho&quot;,&quot;Margarida Bezerra&quot;,&quot;Maria Silveira dos A\u00e7ores&quot;,&quot;Mariano Mour\u00e3o&quot;,&quot;Mateus Noguera&quot;,&quot;Maura Cerveira&quot;,&quot;Mbicy Freyre&quot;,&quot;M\u00e1ximo Porto&quot;,&quot;N\u00e1dia Caires&quot;,&quot;Of\u00e9lia Rem\u00edgio&quot;,&quot;Oscar   Leiria&quot;,&quot;Osvaldo Mour\u00e3o&quot;,&quot;Palmira Lima&quot;,&quot;Paula Quinta&quot;,&quot;Paulino Queiroga&quot;,&quot;Raimundo Espartero&quot;,&quot;Ram\u00e3o Ruas&quot;,&quot;Ram\u00e3o Varanda&quot;,&quot;Reinaldo Pessanha&quot;,&quot;Renato Velasques&quot;,&quot;Roque G\u00f3is&quot;,&quot;Rosa Varanda&quot;,&quot;Ros\u00e1lia Horta&quot;,&quot;Ruca Pacheco&quot;,&quot;Sabrina Correa&quot;,&quot;Salom\u00e3o Louzada&quot;,&quot;Sandro Beiriz&quot;,&quot;Solano Carvalhosa&quot;,&quot;Tom\u00e1sia Sequera&quot;,&quot;Trist\u00e3o Guimaraes&quot;,&quot;Ur\u00e2nia Goes&quot;,&quot;Vanderlei Amaral&quot;,&quot;Vicente Gentil&quot;,&quot;Ximeno Becerril&quot;,&quot;Xisto Nobre&quot;,&quot;Zilda Os\u00f3rio&quot;,&quot;\u00c2ngela Vianna&quot;,&quot;\u00c9rica Arantes&quot;,&quot;\u00c9rico Pardo&quot;]</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -526,39 +265,18 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Gerenciador de Cookie HTTP" enabled="true">
-              <collectionProp name="CookieManager.cookies">
-                <elementProp name="JSESSIONID" elementType="Cookie" testname="JSESSIONID">
-                  <stringProp name="Cookie.value">418AB76CD83EF94U85YD34W</stringProp>
-                  <stringProp name="Cookie.domain"></stringProp>
-                  <stringProp name="Cookie.path"></stringProp>
-                  <boolProp name="Cookie.secure">false</boolProp>
-                  <longProp name="Cookie.expires">0</longProp>
-                  <boolProp name="Cookie.path_specified">true</boolProp>
-                  <boolProp name="Cookie.domain_specified">true</boolProp>
-                </elementProp>
-              </collectionProp>
-              <boolProp name="CookieManager.clearEachIteration">false</boolProp>
-              <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
-            </CookieManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Asserções de Resposta" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1875008601">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-              <stringProp name="Assertion.scope">all</stringProp>
-            </ResponseAssertion>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH"></stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">true</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração ParallelStream" enabled="true">
-          <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">${repeticoes}</stringProp>
-        </LoopController>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test ParallelStream" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP " enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -566,65 +284,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">&#xd;
-	[&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;1william franklin&quot;&#xd;
-	]&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">[&quot;Abigail Peralta&quot;,&quot;Adelaide Muniz&quot;,&quot;Ad\u00e9lio Anlicoara&quot;,&quot;Ad\u00e9lio Asunci\u00f3n&quot;,&quot;Alarico Macena&quot;,&quot;Albino Belchiorinho&quot;,&quot;Albino Coimbra&quot;,&quot;Alceste Var\u00e3o&quot;,&quot;Aline Mainha&quot;,&quot;Alu\u00edsio Mayor&quot;,&quot;Alzira Bezerril&quot;,&quot;Ang\u00e9lico Viana&quot;,&quot;Arminda Penteado&quot;,&quot;Artur Estrela&quot;,&quot;Baltasar Fortunato&quot;,&quot;Branca Furquim&quot;,&quot;B\u00e1rbara Queir\u00f3s&quot;,&quot;Caetano Prado&quot;,&quot;Calisto Mansilha&quot;,&quot;Carminda Porci\u00fancula&quot;,&quot;Clotilde Meneses&quot;,&quot;Conrado Diniz&quot;,&quot;Cosperranho Villas Boas&quot;,&quot;C\u00e1ssio Canedo&quot;,&quot;C\u00e9sar Mangueira&quot;,&quot;David Mascarenhas&quot;,&quot;Dinis Caballero&quot;,&quot;Di\u00f3genes Bocai\u00fava&quot;,&quot;Elisabete Nunes&quot;,&quot;Eloi Castellano&quot;,&quot;Elvira Beltr\u00e3o&quot;,&quot;Elvira Morais&quot;,&quot;Emiliana Zarco&quot;,&quot;Em\u00eddio Barrios&quot;,&quot;Esmeralda P\u00eassego&quot;,&quot;Eudes Campos&quot;,&quot;Evandro Olivares&quot;,&quot;Fabiano Pirassununga&quot;,&quot;Felicidade Quiroga&quot;,&quot;Fernanda Marques&quot;,&quot;Florinda Reis&quot;,&quot;Fl\u00e1via Bernardes&quot;,&quot;Galindo Leal&quot;,&quot;Geraldo Gentil&quot;,&quot;Gil Ferreira&quot;,&quot;Gilberto Sacadura&quot;,&quot;Godofredo Vasques&quot;,&quot;Hugo Borja&quot;,&quot;Ibijara Gaspar&quot;,&quot;Ingrit Teves&quot;,&quot;Isilda Galindo&quot;,&quot;Jacinta Guaran\u00e1&quot;,&quot;Jaime Mora&quot;,&quot;Jana\u00edna Guterres&quot;,&quot;Jer\u00f3nimo, Jer\u00f4nimo Noite&quot;,&quot;J\u00f3natas Fagundes&quot;,&quot;Leandro Candal&quot;,&quot;Leonilde Outeiro&quot;,&quot;Levi Campello&quot;,&quot;Lineu Ornellas&quot;,&quot;Lino Coelho&quot;,&quot;Louren\u00e7o Marinho&quot;,&quot;Margarida Bezerra&quot;,&quot;Maria Silveira dos A\u00e7ores&quot;,&quot;Mariano Mour\u00e3o&quot;,&quot;Mateus Noguera&quot;,&quot;Maura Cerveira&quot;,&quot;Mbicy Freyre&quot;,&quot;M\u00e1ximo Porto&quot;,&quot;N\u00e1dia Caires&quot;,&quot;Of\u00e9lia Rem\u00edgio&quot;,&quot;Oscar   Leiria&quot;,&quot;Osvaldo Mour\u00e3o&quot;,&quot;Palmira Lima&quot;,&quot;Paula Quinta&quot;,&quot;Paulino Queiroga&quot;,&quot;Raimundo Espartero&quot;,&quot;Ram\u00e3o Ruas&quot;,&quot;Ram\u00e3o Varanda&quot;,&quot;Reinaldo Pessanha&quot;,&quot;Renato Velasques&quot;,&quot;Roque G\u00f3is&quot;,&quot;Rosa Varanda&quot;,&quot;Ros\u00e1lia Horta&quot;,&quot;Ruca Pacheco&quot;,&quot;Sabrina Correa&quot;,&quot;Salom\u00e3o Louzada&quot;,&quot;Sandro Beiriz&quot;,&quot;Solano Carvalhosa&quot;,&quot;Tom\u00e1sia Sequera&quot;,&quot;Trist\u00e3o Guimaraes&quot;,&quot;Ur\u00e2nia Goes&quot;,&quot;Vanderlei Amaral&quot;,&quot;Vicente Gentil&quot;,&quot;Ximeno Becerril&quot;,&quot;Xisto Nobre&quot;,&quot;Zilda Os\u00f3rio&quot;,&quot;\u00c2ngela Vianna&quot;,&quot;\u00c9rica Arantes&quot;,&quot;\u00c9rico Pardo&quot;]</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -654,39 +314,18 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Gerenciador de Cookie HTTP" enabled="true">
-              <collectionProp name="CookieManager.cookies">
-                <elementProp name="JSESSIONID" elementType="Cookie" testname="JSESSIONID">
-                  <stringProp name="Cookie.value">418AB76CD83EF94U85YD34W</stringProp>
-                  <stringProp name="Cookie.domain"></stringProp>
-                  <stringProp name="Cookie.path"></stringProp>
-                  <boolProp name="Cookie.secure">false</boolProp>
-                  <longProp name="Cookie.expires">0</longProp>
-                  <boolProp name="Cookie.path_specified">true</boolProp>
-                  <boolProp name="Cookie.domain_specified">true</boolProp>
-                </elementProp>
-              </collectionProp>
-              <boolProp name="CookieManager.clearEachIteration">false</boolProp>
-              <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
-            </CookieManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Asserções de Resposta" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1875008601">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-              <stringProp name="Assertion.scope">all</stringProp>
-            </ResponseAssertion>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH"></stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">true</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração Callable" enabled="true">
-          <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">${repeticoes}</stringProp>
-        </LoopController>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Callable" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP " enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -694,65 +333,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">&#xd;
-	[&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;william franklin&quot;,&#xd;
-		&quot;1william franklin&quot;&#xd;
-	]&#xd;
-</stringProp>
+                  <stringProp name="Argument.value">[&quot;Abigail Peralta&quot;,&quot;Adelaide Muniz&quot;,&quot;Ad\u00e9lio Anlicoara&quot;,&quot;Ad\u00e9lio Asunci\u00f3n&quot;,&quot;Alarico Macena&quot;,&quot;Albino Belchiorinho&quot;,&quot;Albino Coimbra&quot;,&quot;Alceste Var\u00e3o&quot;,&quot;Aline Mainha&quot;,&quot;Alu\u00edsio Mayor&quot;,&quot;Alzira Bezerril&quot;,&quot;Ang\u00e9lico Viana&quot;,&quot;Arminda Penteado&quot;,&quot;Artur Estrela&quot;,&quot;Baltasar Fortunato&quot;,&quot;Branca Furquim&quot;,&quot;B\u00e1rbara Queir\u00f3s&quot;,&quot;Caetano Prado&quot;,&quot;Calisto Mansilha&quot;,&quot;Carminda Porci\u00fancula&quot;,&quot;Clotilde Meneses&quot;,&quot;Conrado Diniz&quot;,&quot;Cosperranho Villas Boas&quot;,&quot;C\u00e1ssio Canedo&quot;,&quot;C\u00e9sar Mangueira&quot;,&quot;David Mascarenhas&quot;,&quot;Dinis Caballero&quot;,&quot;Di\u00f3genes Bocai\u00fava&quot;,&quot;Elisabete Nunes&quot;,&quot;Eloi Castellano&quot;,&quot;Elvira Beltr\u00e3o&quot;,&quot;Elvira Morais&quot;,&quot;Emiliana Zarco&quot;,&quot;Em\u00eddio Barrios&quot;,&quot;Esmeralda P\u00eassego&quot;,&quot;Eudes Campos&quot;,&quot;Evandro Olivares&quot;,&quot;Fabiano Pirassununga&quot;,&quot;Felicidade Quiroga&quot;,&quot;Fernanda Marques&quot;,&quot;Florinda Reis&quot;,&quot;Fl\u00e1via Bernardes&quot;,&quot;Galindo Leal&quot;,&quot;Geraldo Gentil&quot;,&quot;Gil Ferreira&quot;,&quot;Gilberto Sacadura&quot;,&quot;Godofredo Vasques&quot;,&quot;Hugo Borja&quot;,&quot;Ibijara Gaspar&quot;,&quot;Ingrit Teves&quot;,&quot;Isilda Galindo&quot;,&quot;Jacinta Guaran\u00e1&quot;,&quot;Jaime Mora&quot;,&quot;Jana\u00edna Guterres&quot;,&quot;Jer\u00f3nimo, Jer\u00f4nimo Noite&quot;,&quot;J\u00f3natas Fagundes&quot;,&quot;Leandro Candal&quot;,&quot;Leonilde Outeiro&quot;,&quot;Levi Campello&quot;,&quot;Lineu Ornellas&quot;,&quot;Lino Coelho&quot;,&quot;Louren\u00e7o Marinho&quot;,&quot;Margarida Bezerra&quot;,&quot;Maria Silveira dos A\u00e7ores&quot;,&quot;Mariano Mour\u00e3o&quot;,&quot;Mateus Noguera&quot;,&quot;Maura Cerveira&quot;,&quot;Mbicy Freyre&quot;,&quot;M\u00e1ximo Porto&quot;,&quot;N\u00e1dia Caires&quot;,&quot;Of\u00e9lia Rem\u00edgio&quot;,&quot;Oscar   Leiria&quot;,&quot;Osvaldo Mour\u00e3o&quot;,&quot;Palmira Lima&quot;,&quot;Paula Quinta&quot;,&quot;Paulino Queiroga&quot;,&quot;Raimundo Espartero&quot;,&quot;Ram\u00e3o Ruas&quot;,&quot;Ram\u00e3o Varanda&quot;,&quot;Reinaldo Pessanha&quot;,&quot;Renato Velasques&quot;,&quot;Roque G\u00f3is&quot;,&quot;Rosa Varanda&quot;,&quot;Ros\u00e1lia Horta&quot;,&quot;Ruca Pacheco&quot;,&quot;Sabrina Correa&quot;,&quot;Salom\u00e3o Louzada&quot;,&quot;Sandro Beiriz&quot;,&quot;Solano Carvalhosa&quot;,&quot;Tom\u00e1sia Sequera&quot;,&quot;Trist\u00e3o Guimaraes&quot;,&quot;Ur\u00e2nia Goes&quot;,&quot;Vanderlei Amaral&quot;,&quot;Vicente Gentil&quot;,&quot;Ximeno Becerril&quot;,&quot;Xisto Nobre&quot;,&quot;Zilda Os\u00f3rio&quot;,&quot;\u00c2ngela Vianna&quot;,&quot;\u00c9rica Arantes&quot;,&quot;\u00c9rico Pardo&quot;]</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -782,72 +363,17 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Gerenciador de Cookie HTTP" enabled="true">
-              <collectionProp name="CookieManager.cookies">
-                <elementProp name="JSESSIONID" elementType="Cookie" testname="JSESSIONID">
-                  <stringProp name="Cookie.value">418AB76CD83EF94U85YD34W</stringProp>
-                  <stringProp name="Cookie.domain"></stringProp>
-                  <stringProp name="Cookie.path"></stringProp>
-                  <boolProp name="Cookie.secure">false</boolProp>
-                  <longProp name="Cookie.expires">0</longProp>
-                  <boolProp name="Cookie.path_specified">true</boolProp>
-                  <boolProp name="Cookie.domain_specified">true</boolProp>
-                </elementProp>
-              </collectionProp>
-              <boolProp name="CookieManager.clearEachIteration">false</boolProp>
-              <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
-            </CookieManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Asserções de Resposta" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1875008601">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message">&quot;id&quot;:&quot;william franklin&quot;</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-              <stringProp name="Assertion.scope">all</stringProp>
-            </ResponseAssertion>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH"></stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">true</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árvore de Resultados" enabled="true">
-          <boolProp name="ResultCollector.error_logging">false</boolProp>
-          <objProp>
-            <name>saveConfig</name>
-            <value class="SampleSaveConfiguration">
-              <time>true</time>
-              <latency>true</latency>
-              <timestamp>true</timestamp>
-              <success>true</success>
-              <label>true</label>
-              <code>true</code>
-              <message>true</message>
-              <threadName>true</threadName>
-              <dataType>true</dataType>
-              <encoding>false</encoding>
-              <assertions>true</assertions>
-              <subresults>true</subresults>
-              <responseData>false</responseData>
-              <samplerData>false</samplerData>
-              <xml>false</xml>
-              <fieldNames>true</fieldNames>
-              <responseHeaders>false</responseHeaders>
-              <requestHeaders>false</requestHeaders>
-              <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-              <assertionsResultsToSave>0</assertionsResultsToSave>
-              <bytes>true</bytes>
-              <sentBytes>true</sentBytes>
-              <url>true</url>
-              <threadCounts>true</threadCounts>
-              <idleTime>true</idleTime>
-              <connectTime>true</connectTime>
-            </value>
-          </objProp>
-          <stringProp name="filename"></stringProp>
-        </ResultCollector>
-        <hashTree/>
       </hashTree>
     </hashTree>
   </hashTree>

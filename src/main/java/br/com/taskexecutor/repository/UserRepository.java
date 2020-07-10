@@ -15,13 +15,24 @@ public class UserRepository {
 
     private final static Logger logger = LoggerFactory.getLogger(UserRepository.class);
 
+    @Async
+    public CompletableFuture<User> simpleAsyncTaskExecutor(String user) {
+        logger.info("Thread -> " + Thread.currentThread().getName());
+        User userResult = new User();
+        userResult.setLogin("123");
+        userResult.setName(user);
+        userResult.setData(LocalDateTime.now());
+
+        return CompletableFuture.completedFuture(userResult);
+    }
+
     @Async("threadPoolTaskExecutorCustom")
     public CompletableFuture<User> threadPoolTaskExecutor(String user) {
 
         logger.info("Thread -> " + Thread.currentThread().getName());
             User userResult = new User();
             userResult.setLogin("123");
-            userResult.setId(user);
+            userResult.setName(user);
             userResult.setData(LocalDateTime.now());
         return CompletableFuture.completedFuture(userResult);
     }
@@ -31,18 +42,7 @@ public class UserRepository {
         logger.info("Thread -> " + Thread.currentThread().getName());
         User userResult = new User();
         userResult.setLogin("123");
-        userResult.setId(user);
-        userResult.setData(LocalDateTime.now());
-
-        return CompletableFuture.completedFuture(userResult);
-    }
-
-    @Async("simpleAsyncTaskExecutor")
-    public CompletableFuture<User> simpleAsyncTaskExecutor(String user) {
-        logger.info("Thread -> " + Thread.currentThread().getName());
-        User userResult = new User();
-        userResult.setLogin("123");
-        userResult.setId(user);
+        userResult.setName(user);
         userResult.setData(LocalDateTime.now());
 
         return CompletableFuture.completedFuture(userResult);
@@ -53,7 +53,7 @@ public class UserRepository {
         logger.info("Thread -> " + Thread.currentThread().getName());
         User userResult = new User();
         userResult.setLogin("123");
-        userResult.setId(user);
+        userResult.setName(user);
         userResult.setData(LocalDateTime.now());
 
         return CompletableFuture.completedFuture(userResult);
@@ -63,7 +63,7 @@ public class UserRepository {
         logger.info("Thread -> " + Thread.currentThread().getName());
         User userResult = new User();
         userResult.setLogin("123");
-        userResult.setId(user);
+        userResult.setName(user);
         userResult.setData(LocalDateTime.now());
 
         return CompletableFuture.completedFuture(userResult);
@@ -75,7 +75,7 @@ public class UserRepository {
             logger.info("Thread -> " + Thread.currentThread().getName());
             User userResult = new User();
             userResult.setLogin("123");
-            userResult.setId(user);
+            userResult.setName(user);
             userResult.setData(LocalDateTime.now());
             return userResult;
         };

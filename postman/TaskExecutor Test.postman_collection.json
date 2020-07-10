@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "5d6e3d46-7f81-4974-a072-117294c1cfe6",
+		"name": "TaskExecutor Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test ThreadPoolTaskExecutor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t\"Abigail Silveira\",\n\t\"Adelino Nolasco\",\n\t\"Almerinda Juruna\",\n\t\"Amílcar Rufino\",\n\t\"Angélico Guedez\",\n\t\"Antónia Lagos\",\n\t\"Antônia Mendoça\",\n\t\"Apoena Sobral\",\n\t\"Astolfo Cyrne\",\n\t\"Augusto Passarinho\",\n\t\"Aurélio Xavier\",\n\t\"Baltasar Mata\",\n\t\"Bernardo Saldaña\",\n\t\"Branco Milheirão\",\n\t\"Bruna Meneses\",\n\t\"Calisto Costa\",\n\t\"Camilo Franca\",\n\t\"Carina Sales\",\n\t\"Carlos Palhares\",\n\t\"Carlos Setúbal\",\n\t\"Catarino Alvim\",\n\t\"Comecus Sequeira\",\n\t\"Conrado Robalo\",\n\t\"Cristina Collares\",\n\t\"Domingos Teodoro\",\n\t\"Duarte Parracho\",\n\t\"Dulce Damásio\",\n\t\"Eduarda Barreto\",\n\t\"Elba Lemes\",\n\t\"Ema Cambaúva\",\n\t\"Fulvio Enríquez\",\n\t\"Galindo Eanes\",\n\t\"Galindo Manso\",\n\t\"Gedeão Regalado\",\n\t\"Gerardo Noguera\",\n\t\"Gerson Gracia\",\n\t\"Gil Montero\",\n\t\"Gilberto Moita\",\n\t\"Girão Silvestre\",\n\t\"Girão Torres\",\n\t\"Godofredo Guedelha\",\n\t\"Guaraci Acevedo\",\n\t\"Guida Domingos\",\n\t\"Hugo Prudente\",\n\t\"Hélio Picanço\",\n\t\"Irene Cayubi\",\n\t\"Isadora Villela\",\n\t\"Isaura Bogado\",\n\t\"Itiberê Vilas-Boas\",\n\t\"Iuri Carballo\",\n\t\"Jacinto Miera\",\n\t\"José Araripe\",\n\t\"Judá Vilarinho\",\n\t\"Juliano Paiva\",\n\t\"Laura Fagundes\",\n\t\"Laís Carvalhosa\",\n\t\"Leónidas Noite\",\n\t\"Lurdes Belém\",\n\t\"Lurdes Buenaventura\",\n\t\"Luzia Fuentes\",\n\t\"Lúcio Conceição\",\n\t\"Magali Viégas\",\n\t\"Mara Cidreira\",\n\t\"Matias Bernardes\",\n\t\"Maurício Sampaio\",\n\t\"Mercedes Carvalhoso\",\n\t\"Márcia Laureano\",\n\t\"Márcia Serralheiro\",\n\t\"Natacha Graça\",\n\t\"Nídia Lacerda\",\n\t\"Nídia Vilarim\",\n\t\"Olívio Mourinho\",\n\t\"Pandora Enríquez\",\n\t\"Paraguaçu Grande\",\n\t\"Parcidio Arouca\",\n\t\"Patrício Viana\",\n\t\"Plínio Lira\",\n\t\"Quintino Silva\",\n\t\"Quirina Carreira\",\n\t\"Rafaela Gómez\",\n\t\"Rafaela Rijo\",\n\t\"Regina Blanco\",\n\t\"Reginaldo Mata\",\n\t\"Renan Castaño\",\n\t\"Romano Dornelles\",\n\t\"Rómulo Nunes\",\n\t\"Sabrina Mesquita\",\n\t\"Santiago Lisboa\",\n\t\"Simone Barra\",\n\t\"Soeiro Morales\",\n\t\"Sónia Casalinho\",\n\t\"Talita Pais\",\n\t\"Tomásia Piteira\",\n\t\"Ubiratã Mariz\",\n\t\"Valdemar Figueiredo\",\n\t\"Verônica   Vidal\",\n\t\"Vicente Cortés\",\n\t\"Zuriel Rios\",\n\t\"Ângela Espartero\",\n\t\"Ítala Azambuja\"\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/process/user/thread/pool/task/executor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"process",
+						"user",
+						"thread",
+						"pool",
+						"task",
+						"executor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test SyncTaskExecutor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t\"Abigail Silveira\",\n\t\"Adelino Nolasco\",\n\t\"Almerinda Juruna\",\n\t\"Amílcar Rufino\",\n\t\"Angélico Guedez\",\n\t\"Antónia Lagos\",\n\t\"Antônia Mendoça\",\n\t\"Apoena Sobral\",\n\t\"Astolfo Cyrne\",\n\t\"Augusto Passarinho\",\n\t\"Aurélio Xavier\",\n\t\"Baltasar Mata\",\n\t\"Bernardo Saldaña\",\n\t\"Branco Milheirão\",\n\t\"Bruna Meneses\",\n\t\"Calisto Costa\",\n\t\"Camilo Franca\",\n\t\"Carina Sales\",\n\t\"Carlos Palhares\",\n\t\"Carlos Setúbal\",\n\t\"Catarino Alvim\",\n\t\"Comecus Sequeira\",\n\t\"Conrado Robalo\",\n\t\"Cristina Collares\",\n\t\"Domingos Teodoro\",\n\t\"Duarte Parracho\",\n\t\"Dulce Damásio\",\n\t\"Eduarda Barreto\",\n\t\"Elba Lemes\",\n\t\"Ema Cambaúva\",\n\t\"Fulvio Enríquez\",\n\t\"Galindo Eanes\",\n\t\"Galindo Manso\",\n\t\"Gedeão Regalado\",\n\t\"Gerardo Noguera\",\n\t\"Gerson Gracia\",\n\t\"Gil Montero\",\n\t\"Gilberto Moita\",\n\t\"Girão Silvestre\",\n\t\"Girão Torres\",\n\t\"Godofredo Guedelha\",\n\t\"Guaraci Acevedo\",\n\t\"Guida Domingos\",\n\t\"Hugo Prudente\",\n\t\"Hélio Picanço\",\n\t\"Irene Cayubi\",\n\t\"Isadora Villela\",\n\t\"Isaura Bogado\",\n\t\"Itiberê Vilas-Boas\",\n\t\"Iuri Carballo\",\n\t\"Jacinto Miera\",\n\t\"José Araripe\",\n\t\"Judá Vilarinho\",\n\t\"Juliano Paiva\",\n\t\"Laura Fagundes\",\n\t\"Laís Carvalhosa\",\n\t\"Leónidas Noite\",\n\t\"Lurdes Belém\",\n\t\"Lurdes Buenaventura\",\n\t\"Luzia Fuentes\",\n\t\"Lúcio Conceição\",\n\t\"Magali Viégas\",\n\t\"Mara Cidreira\",\n\t\"Matias Bernardes\",\n\t\"Maurício Sampaio\",\n\t\"Mercedes Carvalhoso\",\n\t\"Márcia Laureano\",\n\t\"Márcia Serralheiro\",\n\t\"Natacha Graça\",\n\t\"Nídia Lacerda\",\n\t\"Nídia Vilarim\",\n\t\"Olívio Mourinho\",\n\t\"Pandora Enríquez\",\n\t\"Paraguaçu Grande\",\n\t\"Parcidio Arouca\",\n\t\"Patrício Viana\",\n\t\"Plínio Lira\",\n\t\"Quintino Silva\",\n\t\"Quirina Carreira\",\n\t\"Rafaela Gómez\",\n\t\"Rafaela Rijo\",\n\t\"Regina Blanco\",\n\t\"Reginaldo Mata\",\n\t\"Renan Castaño\",\n\t\"Romano Dornelles\",\n\t\"Rómulo Nunes\",\n\t\"Sabrina Mesquita\",\n\t\"Santiago Lisboa\",\n\t\"Simone Barra\",\n\t\"Soeiro Morales\",\n\t\"Sónia Casalinho\",\n\t\"Talita Pais\",\n\t\"Tomásia Piteira\",\n\t\"Ubiratã Mariz\",\n\t\"Valdemar Figueiredo\",\n\t\"Verônica   Vidal\",\n\t\"Vicente Cortés\",\n\t\"Zuriel Rios\",\n\t\"Ângela Espartero\",\n\t\"Ítala Azambuja\"\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/process/user/sync/task/executor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"process",
+						"user",
+						"sync",
+						"task",
+						"executor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test SimpleAsyncTaskExecutor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t\"Abigail Silveira\",\n\t\"Adelino Nolasco\",\n\t\"Almerinda Juruna\",\n\t\"Amílcar Rufino\",\n\t\"Angélico Guedez\",\n\t\"Antónia Lagos\",\n\t\"Antônia Mendoça\",\n\t\"Apoena Sobral\",\n\t\"Astolfo Cyrne\",\n\t\"Augusto Passarinho\",\n\t\"Aurélio Xavier\",\n\t\"Baltasar Mata\",\n\t\"Bernardo Saldaña\",\n\t\"Branco Milheirão\",\n\t\"Bruna Meneses\",\n\t\"Calisto Costa\",\n\t\"Camilo Franca\",\n\t\"Carina Sales\",\n\t\"Carlos Palhares\",\n\t\"Carlos Setúbal\",\n\t\"Catarino Alvim\",\n\t\"Comecus Sequeira\",\n\t\"Conrado Robalo\",\n\t\"Cristina Collares\",\n\t\"Domingos Teodoro\",\n\t\"Duarte Parracho\",\n\t\"Dulce Damásio\",\n\t\"Eduarda Barreto\",\n\t\"Elba Lemes\",\n\t\"Ema Cambaúva\",\n\t\"Fulvio Enríquez\",\n\t\"Galindo Eanes\",\n\t\"Galindo Manso\",\n\t\"Gedeão Regalado\",\n\t\"Gerardo Noguera\",\n\t\"Gerson Gracia\",\n\t\"Gil Montero\",\n\t\"Gilberto Moita\",\n\t\"Girão Silvestre\",\n\t\"Girão Torres\",\n\t\"Godofredo Guedelha\",\n\t\"Guaraci Acevedo\",\n\t\"Guida Domingos\",\n\t\"Hugo Prudente\",\n\t\"Hélio Picanço\",\n\t\"Irene Cayubi\",\n\t\"Isadora Villela\",\n\t\"Isaura Bogado\",\n\t\"Itiberê Vilas-Boas\",\n\t\"Iuri Carballo\",\n\t\"Jacinto Miera\",\n\t\"José Araripe\",\n\t\"Judá Vilarinho\",\n\t\"Juliano Paiva\",\n\t\"Laura Fagundes\",\n\t\"Laís Carvalhosa\",\n\t\"Leónidas Noite\",\n\t\"Lurdes Belém\",\n\t\"Lurdes Buenaventura\",\n\t\"Luzia Fuentes\",\n\t\"Lúcio Conceição\",\n\t\"Magali Viégas\",\n\t\"Mara Cidreira\",\n\t\"Matias Bernardes\",\n\t\"Maurício Sampaio\",\n\t\"Mercedes Carvalhoso\",\n\t\"Márcia Laureano\",\n\t\"Márcia Serralheiro\",\n\t\"Natacha Graça\",\n\t\"Nídia Lacerda\",\n\t\"Nídia Vilarim\",\n\t\"Olívio Mourinho\",\n\t\"Pandora Enríquez\",\n\t\"Paraguaçu Grande\",\n\t\"Parcidio Arouca\",\n\t\"Patrício Viana\",\n\t\"Plínio Lira\",\n\t\"Quintino Silva\",\n\t\"Quirina Carreira\",\n\t\"Rafaela Gómez\",\n\t\"Rafaela Rijo\",\n\t\"Regina Blanco\",\n\t\"Reginaldo Mata\",\n\t\"Renan Castaño\",\n\t\"Romano Dornelles\",\n\t\"Rómulo Nunes\",\n\t\"Sabrina Mesquita\",\n\t\"Santiago Lisboa\",\n\t\"Simone Barra\",\n\t\"Soeiro Morales\",\n\t\"Sónia Casalinho\",\n\t\"Talita Pais\",\n\t\"Tomásia Piteira\",\n\t\"Ubiratã Mariz\",\n\t\"Valdemar Figueiredo\",\n\t\"Verônica   Vidal\",\n\t\"Vicente Cortés\",\n\t\"Zuriel Rios\",\n\t\"Ângela Espartero\",\n\t\"Ítala Azambuja\"\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/process/user/simple/async/task/executor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"process",
+						"user",
+						"simple",
+						"async",
+						"task",
+						"executor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test ConcurrentTaskExecutor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t\"Abigail Silveira\",\n\t\"Adelino Nolasco\",\n\t\"Almerinda Juruna\",\n\t\"Amílcar Rufino\",\n\t\"Angélico Guedez\",\n\t\"Antónia Lagos\",\n\t\"Antônia Mendoça\",\n\t\"Apoena Sobral\",\n\t\"Astolfo Cyrne\",\n\t\"Augusto Passarinho\",\n\t\"Aurélio Xavier\",\n\t\"Baltasar Mata\",\n\t\"Bernardo Saldaña\",\n\t\"Branco Milheirão\",\n\t\"Bruna Meneses\",\n\t\"Calisto Costa\",\n\t\"Camilo Franca\",\n\t\"Carina Sales\",\n\t\"Carlos Palhares\",\n\t\"Carlos Setúbal\",\n\t\"Catarino Alvim\",\n\t\"Comecus Sequeira\",\n\t\"Conrado Robalo\",\n\t\"Cristina Collares\",\n\t\"Domingos Teodoro\",\n\t\"Duarte Parracho\",\n\t\"Dulce Damásio\",\n\t\"Eduarda Barreto\",\n\t\"Elba Lemes\",\n\t\"Ema Cambaúva\",\n\t\"Fulvio Enríquez\",\n\t\"Galindo Eanes\",\n\t\"Galindo Manso\",\n\t\"Gedeão Regalado\",\n\t\"Gerardo Noguera\",\n\t\"Gerson Gracia\",\n\t\"Gil Montero\",\n\t\"Gilberto Moita\",\n\t\"Girão Silvestre\",\n\t\"Girão Torres\",\n\t\"Godofredo Guedelha\",\n\t\"Guaraci Acevedo\",\n\t\"Guida Domingos\",\n\t\"Hugo Prudente\",\n\t\"Hélio Picanço\",\n\t\"Irene Cayubi\",\n\t\"Isadora Villela\",\n\t\"Isaura Bogado\",\n\t\"Itiberê Vilas-Boas\",\n\t\"Iuri Carballo\",\n\t\"Jacinto Miera\",\n\t\"José Araripe\",\n\t\"Judá Vilarinho\",\n\t\"Juliano Paiva\",\n\t\"Laura Fagundes\",\n\t\"Laís Carvalhosa\",\n\t\"Leónidas Noite\",\n\t\"Lurdes Belém\",\n\t\"Lurdes Buenaventura\",\n\t\"Luzia Fuentes\",\n\t\"Lúcio Conceição\",\n\t\"Magali Viégas\",\n\t\"Mara Cidreira\",\n\t\"Matias Bernardes\",\n\t\"Maurício Sampaio\",\n\t\"Mercedes Carvalhoso\",\n\t\"Márcia Laureano\",\n\t\"Márcia Serralheiro\",\n\t\"Natacha Graça\",\n\t\"Nídia Lacerda\",\n\t\"Nídia Vilarim\",\n\t\"Olívio Mourinho\",\n\t\"Pandora Enríquez\",\n\t\"Paraguaçu Grande\",\n\t\"Parcidio Arouca\",\n\t\"Patrício Viana\",\n\t\"Plínio Lira\",\n\t\"Quintino Silva\",\n\t\"Quirina Carreira\",\n\t\"Rafaela Gómez\",\n\t\"Rafaela Rijo\",\n\t\"Regina Blanco\",\n\t\"Reginaldo Mata\",\n\t\"Renan Castaño\",\n\t\"Romano Dornelles\",\n\t\"Rómulo Nunes\",\n\t\"Sabrina Mesquita\",\n\t\"Santiago Lisboa\",\n\t\"Simone Barra\",\n\t\"Soeiro Morales\",\n\t\"Sónia Casalinho\",\n\t\"Talita Pais\",\n\t\"Tomásia Piteira\",\n\t\"Ubiratã Mariz\",\n\t\"Valdemar Figueiredo\",\n\t\"Verônica   Vidal\",\n\t\"Vicente Cortés\",\n\t\"Zuriel Rios\",\n\t\"Ângela Espartero\",\n\t\"Ítala Azambuja\"\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/process/user/concurrent/task/executor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"process",
+						"user",
+						"concurrent",
+						"task",
+						"executor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test ParallelStream",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t\"Abigail Silveira\",\n\t\"Adelino Nolasco\",\n\t\"Almerinda Juruna\",\n\t\"Amílcar Rufino\",\n\t\"Angélico Guedez\",\n\t\"Antónia Lagos\",\n\t\"Antônia Mendoça\",\n\t\"Apoena Sobral\",\n\t\"Astolfo Cyrne\",\n\t\"Augusto Passarinho\",\n\t\"Aurélio Xavier\",\n\t\"Baltasar Mata\",\n\t\"Bernardo Saldaña\",\n\t\"Branco Milheirão\",\n\t\"Bruna Meneses\",\n\t\"Calisto Costa\",\n\t\"Camilo Franca\",\n\t\"Carina Sales\",\n\t\"Carlos Palhares\",\n\t\"Carlos Setúbal\",\n\t\"Catarino Alvim\",\n\t\"Comecus Sequeira\",\n\t\"Conrado Robalo\",\n\t\"Cristina Collares\",\n\t\"Domingos Teodoro\",\n\t\"Duarte Parracho\",\n\t\"Dulce Damásio\",\n\t\"Eduarda Barreto\",\n\t\"Elba Lemes\",\n\t\"Ema Cambaúva\",\n\t\"Fulvio Enríquez\",\n\t\"Galindo Eanes\",\n\t\"Galindo Manso\",\n\t\"Gedeão Regalado\",\n\t\"Gerardo Noguera\",\n\t\"Gerson Gracia\",\n\t\"Gil Montero\",\n\t\"Gilberto Moita\",\n\t\"Girão Silvestre\",\n\t\"Girão Torres\",\n\t\"Godofredo Guedelha\",\n\t\"Guaraci Acevedo\",\n\t\"Guida Domingos\",\n\t\"Hugo Prudente\",\n\t\"Hélio Picanço\",\n\t\"Irene Cayubi\",\n\t\"Isadora Villela\",\n\t\"Isaura Bogado\",\n\t\"Itiberê Vilas-Boas\",\n\t\"Iuri Carballo\",\n\t\"Jacinto Miera\",\n\t\"José Araripe\",\n\t\"Judá Vilarinho\",\n\t\"Juliano Paiva\",\n\t\"Laura Fagundes\",\n\t\"Laís Carvalhosa\",\n\t\"Leónidas Noite\",\n\t\"Lurdes Belém\",\n\t\"Lurdes Buenaventura\",\n\t\"Luzia Fuentes\",\n\t\"Lúcio Conceição\",\n\t\"Magali Viégas\",\n\t\"Mara Cidreira\",\n\t\"Matias Bernardes\",\n\t\"Maurício Sampaio\",\n\t\"Mercedes Carvalhoso\",\n\t\"Márcia Laureano\",\n\t\"Márcia Serralheiro\",\n\t\"Natacha Graça\",\n\t\"Nídia Lacerda\",\n\t\"Nídia Vilarim\",\n\t\"Olívio Mourinho\",\n\t\"Pandora Enríquez\",\n\t\"Paraguaçu Grande\",\n\t\"Parcidio Arouca\",\n\t\"Patrício Viana\",\n\t\"Plínio Lira\",\n\t\"Quintino Silva\",\n\t\"Quirina Carreira\",\n\t\"Rafaela Gómez\",\n\t\"Rafaela Rijo\",\n\t\"Regina Blanco\",\n\t\"Reginaldo Mata\",\n\t\"Renan Castaño\",\n\t\"Romano Dornelles\",\n\t\"Rómulo Nunes\",\n\t\"Sabrina Mesquita\",\n\t\"Santiago Lisboa\",\n\t\"Simone Barra\",\n\t\"Soeiro Morales\",\n\t\"Sónia Casalinho\",\n\t\"Talita Pais\",\n\t\"Tomásia Piteira\",\n\t\"Ubiratã Mariz\",\n\t\"Valdemar Figueiredo\",\n\t\"Verônica   Vidal\",\n\t\"Vicente Cortés\",\n\t\"Zuriel Rios\",\n\t\"Ângela Espartero\",\n\t\"Ítala Azambuja\"\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/process/user/parallel/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"process",
+						"user",
+						"parallel",
+						"stream"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Callable",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t\"Abigail Silveira\",\n\t\"Adelino Nolasco\",\n\t\"Almerinda Juruna\",\n\t\"Amílcar Rufino\",\n\t\"Angélico Guedez\",\n\t\"Antónia Lagos\",\n\t\"Antônia Mendoça\",\n\t\"Apoena Sobral\",\n\t\"Astolfo Cyrne\",\n\t\"Augusto Passarinho\",\n\t\"Aurélio Xavier\",\n\t\"Baltasar Mata\",\n\t\"Bernardo Saldaña\",\n\t\"Branco Milheirão\",\n\t\"Bruna Meneses\",\n\t\"Calisto Costa\",\n\t\"Camilo Franca\",\n\t\"Carina Sales\",\n\t\"Carlos Palhares\",\n\t\"Carlos Setúbal\",\n\t\"Catarino Alvim\",\n\t\"Comecus Sequeira\",\n\t\"Conrado Robalo\",\n\t\"Cristina Collares\",\n\t\"Domingos Teodoro\",\n\t\"Duarte Parracho\",\n\t\"Dulce Damásio\",\n\t\"Eduarda Barreto\",\n\t\"Elba Lemes\",\n\t\"Ema Cambaúva\",\n\t\"Fulvio Enríquez\",\n\t\"Galindo Eanes\",\n\t\"Galindo Manso\",\n\t\"Gedeão Regalado\",\n\t\"Gerardo Noguera\",\n\t\"Gerson Gracia\",\n\t\"Gil Montero\",\n\t\"Gilberto Moita\",\n\t\"Girão Silvestre\",\n\t\"Girão Torres\",\n\t\"Godofredo Guedelha\",\n\t\"Guaraci Acevedo\",\n\t\"Guida Domingos\",\n\t\"Hugo Prudente\",\n\t\"Hélio Picanço\",\n\t\"Irene Cayubi\",\n\t\"Isadora Villela\",\n\t\"Isaura Bogado\",\n\t\"Itiberê Vilas-Boas\",\n\t\"Iuri Carballo\",\n\t\"Jacinto Miera\",\n\t\"José Araripe\",\n\t\"Judá Vilarinho\",\n\t\"Juliano Paiva\",\n\t\"Laura Fagundes\",\n\t\"Laís Carvalhosa\",\n\t\"Leónidas Noite\",\n\t\"Lurdes Belém\",\n\t\"Lurdes Buenaventura\",\n\t\"Luzia Fuentes\",\n\t\"Lúcio Conceição\",\n\t\"Magali Viégas\",\n\t\"Mara Cidreira\",\n\t\"Matias Bernardes\",\n\t\"Maurício Sampaio\",\n\t\"Mercedes Carvalhoso\",\n\t\"Márcia Laureano\",\n\t\"Márcia Serralheiro\",\n\t\"Natacha Graça\",\n\t\"Nídia Lacerda\",\n\t\"Nídia Vilarim\",\n\t\"Olívio Mourinho\",\n\t\"Pandora Enríquez\",\n\t\"Paraguaçu Grande\",\n\t\"Parcidio Arouca\",\n\t\"Patrício Viana\",\n\t\"Plínio Lira\",\n\t\"Quintino Silva\",\n\t\"Quirina Carreira\",\n\t\"Rafaela Gómez\",\n\t\"Rafaela Rijo\",\n\t\"Regina Blanco\",\n\t\"Reginaldo Mata\",\n\t\"Renan Castaño\",\n\t\"Romano Dornelles\",\n\t\"Rómulo Nunes\",\n\t\"Sabrina Mesquita\",\n\t\"Santiago Lisboa\",\n\t\"Simone Barra\",\n\t\"Soeiro Morales\",\n\t\"Sónia Casalinho\",\n\t\"Talita Pais\",\n\t\"Tomásia Piteira\",\n\t\"Ubiratã Mariz\",\n\t\"Valdemar Figueiredo\",\n\t\"Verônica   Vidal\",\n\t\"Vicente Cortés\",\n\t\"Zuriel Rios\",\n\t\"Ângela Espartero\",\n\t\"Ítala Azambuja\"\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/process/user/parallel/callable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"process",
+						"user",
+						"parallel",
+						"callable"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

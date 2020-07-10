@@ -31,11 +31,6 @@ public class AsyncConfiguration {
        return new SyncTaskExecutor();
     }
 
-    @Bean(name = "simpleAsyncTaskExecutor")
-    public TaskExecutor getSimpleAsyncTaskExecutor() {
-        return new SimpleAsyncTaskExecutor();
-    }
-
     @Bean(name = "concurrentTaskExecutor")
     public TaskExecutor getConcurrentTaskExecutor() {
         return new ConcurrentTaskExecutor();
